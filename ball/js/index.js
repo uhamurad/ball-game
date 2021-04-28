@@ -171,7 +171,9 @@ let oneStep = function(){
 }
 
 let commonTimer = setInterval(function(){
-    oneStep();
+    if (gameStatus === 'run'){
+        oneStep();
+    }
     if (gameStatus === 'over'){
         clearInterval(commonTimer)  
         clearInterval(leftRightTimer)
