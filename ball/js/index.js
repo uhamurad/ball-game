@@ -10,13 +10,15 @@ var analyser;
 var src;
 audio = document.getElementById("audio");
 
-document.onkeydown = function(event){
+
+let enterListener = function(event){
 	
-    console.log(event);
+    //console.log(event);
 	
 	if (event.code === "Enter") {
-		console.log("Код активирован");
+		//console.log("Код активирован");
         
+        alert('Нажат Энтер');
 
         audio.play();
 	}
@@ -34,7 +36,7 @@ sleep(100);
 }*/
 
 }
-
+document.addEventListener( "keydown" , enterListener);
 
 
 
@@ -189,13 +191,15 @@ let checkBallHasRightPosition = function(){
 }
 
 let leftRightTimer;
-document.onkeydown = function(event){
+let arrowsListener = function(event){
 
     //console.log(event);	
 
     if (gameStatus === 'run'){
 
         if (event.code === 'ArrowLeft'){
+            
+            alert('Нажато налево');
 
             let limitX = ballMesh.position.x - 11;
             leftRightTimer = setInterval(function(){
@@ -209,7 +213,9 @@ document.onkeydown = function(event){
             }, 10);
 
         } else if (event.code === "ArrowRight") {
-
+            
+            alert('Нажато направо');
+            
             var limitX = ballMesh.position.x + 11;
             leftRightTimer = setInterval(function(){
 
@@ -227,6 +233,7 @@ document.onkeydown = function(event){
     }
 
 }
+document.addEventListener('keydown', arrowsListener);
 
 
 
