@@ -2,7 +2,7 @@
 
 // let scene, controls, renderer, camera;
 
-alert("Нажмите на Enter");
+//alert("Нажмите на Enter");
 
 var  audio;
 var context;
@@ -11,21 +11,13 @@ var src;
 audio = document.getElementById("audio");
 
 document.onkeydown = function(event){
-	console.log(event);
+	
+    console.log(event);
 	
 	if (event.code === "Enter") {
 		console.log("Код активирован");
 		audio.play();
-	}
 
-function preparation(){
-	
-	context = new AudioContext();
-	analyser = context.createAnalyser();
-	src = context.createMediaElementSource(audio);
-	src.connect(analyser);
-	analyser.connect(context.destination);
-}
 
 
 
@@ -218,7 +210,7 @@ document.onkeydown = function(event){
 	
 }
 
-
+	}
 
 /*let oneStep1 = function(){
 	console.log(ballMesh.position.z);
