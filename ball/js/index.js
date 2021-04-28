@@ -18,8 +18,8 @@ let enterListener = function(event){
 	if (event.code === "Enter") {
 		//console.log("Код активирован");
         
-        alert('Нажат Энтер');
-
+        animate();
+        gameStatus = 'run';
         audio.play();
 	}
 
@@ -45,7 +45,6 @@ document.addEventListener( "keydown" , enterListener);
 init();
 
 
-//animate();
 
 let trackMaterial = new THREE.MeshLambertMaterial({ color: '#00FF00'});
 
@@ -193,13 +192,13 @@ let checkBallHasRightPosition = function(){
 let leftRightTimer;
 let arrowsListener = function(event){
 
-    //console.log(event);	
+    console.log(gameStatus);	
 
     if (gameStatus === 'run'){
 
         if (event.code === 'ArrowLeft'){
             
-            alert('Нажато налево');
+            //alert('Нажато налево');
 
             let limitX = ballMesh.position.x - 11;
             leftRightTimer = setInterval(function(){
@@ -214,7 +213,7 @@ let arrowsListener = function(event){
 
         } else if (event.code === "ArrowRight") {
             
-            alert('Нажато направо');
+            //alert('Нажато направо');
             
             var limitX = ballMesh.position.x + 11;
             leftRightTimer = setInterval(function(){
