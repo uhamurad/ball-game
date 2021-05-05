@@ -4,6 +4,28 @@
 
 //alert("Нажмите на Enter");
 
+
+var mixBut = document.getElementById("mixBut");
+
+mixBut.addEventListener("click", Start);
+
+function Start(){
+    
+        animate();
+        gameStatus = 'run';
+        audio.play();
+    
+}
+
+/*function Stop(){
+    console.log("Stopped");
+    mixBut.removeEventListener("click", Stop);
+    mixBut.addEventListener("click", Start);
+    mixBut.value = "Start";
+}*/
+
+
+
 var  audio;
 var context;
 var analyser;
