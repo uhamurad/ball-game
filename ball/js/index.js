@@ -54,7 +54,7 @@ init();
 
 let trackMaterial = new THREE.MeshLambertMaterial({ color: '#00FF00'});
 
-let trackGeometry = new THREE.BoxGeometry(10, 1, 100);
+let trackGeometry = new THREE.BoxGeometry(10, 1, 500);
 
 let tracksMeshes = Array();
 
@@ -64,7 +64,7 @@ let addTrack = function(x){
 
     trackMesh1.position.x = x;
     trackMesh1.position.y = -0.5;
-    trackMesh1.position.z = -50;
+    trackMesh1.position.z = -250;
     scene.add(trackMesh1);
 
     tracksMeshes.push(trackMesh1);
@@ -159,13 +159,21 @@ let oneStep = function(){
         ballMesh.position.z = ballMesh.position.z - 1;
     }*/
 
-    if (tracksMeshes[0].position.z < 51){
+    //if (tracksMeshes[0].position.z < 51){
         //console.log(tracksMeshes[0].position.z);
         tracksMeshes[0].position.z = tracksMeshes[0].position.z + 1; 
         tracksMeshes[1].position.z = tracksMeshes[1].position.z + 1;
         tracksMeshes[2].position.z = tracksMeshes[2].position.z + 1;
+    //}
+    if (tracksMeshes[0].position.z > 51){
+        tracksMeshes[0].position.z = tracksMeshes[0].position.z - 100;
     }
-
+    if (tracksMeshes[1].position.z > 51){
+        tracksMeshes[1].position.z = tracksMeshes[1].position.z - 100;
+    }
+        if (tracksMeshes[2].position.z > 51){
+        tracksMeshes[2].position.z = tracksMeshes[2].position.z - 100;
+    }
 
     if (BoxMeshes[0].position.z < 51){
         //console.log(BoxMeshes[0].position.z);
