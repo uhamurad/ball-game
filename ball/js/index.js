@@ -11,18 +11,13 @@ mixBut.addEventListener("click", Start);
 
 function Start(){
     
-        animate();
-        gameStatus = 'run';
-        audio.play();
+    animate();
+    gameStatus = 'run';
+    audio.play();
+    
+    mixBut.remove();
     
 }
-
-/*function Stop(){
-    console.log("Stopped");
-    mixBut.removeEventListener("click", Stop);
-    mixBut.addEventListener("click", Start);
-    mixBut.value = "Start";
-}*/
 
 
 

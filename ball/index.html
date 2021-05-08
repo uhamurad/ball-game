@@ -4,9 +4,7 @@
     
     
     
-    <input type="button"; id="mixBut"; value="START"; style="padding: 40px; color: white; background-color: yellow; border-radius: 15px; float: center;  margin: 0px 650px;
-  max-width: 200px;
-  width: 100%;"/>
+
     
     
     <meta charset="utf-8">
@@ -25,10 +23,37 @@
     </style>
 </head>
 <body>
+
+    
+
+    
 <audio src= "./Sounds/Begin.mp3" id="audio"></audio>
 
 <canvas id="scene-canvas"></canvas>
 
+    
+        <div style="height: 0;">
+    <input 
+       type="button" 
+       id="mixBut" 
+       value="START" 
+       style="
+              display: block;
+              padding: 20px 40px 20px 40px; 
+              color: black; 
+              background-color: yellow; 
+              border-radius: 15px; 
+              margin: 10px auto 10px auto;
+              width: 200px;
+              position: relative;
+              top: -250px;
+              "
+       /> 
+    </div>           
+
+        
+    
+    
 
 <script src="./../resources/threejs/r112/build/three.js"></script>
 <script src="./../resources/threejs/r112/examples/js/controls/OrbitControls.js"></script>
