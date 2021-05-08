@@ -17,6 +17,8 @@ function Start(){
     
     mixBut.remove();
     
+    document.removeEventListener( "keydown" , enterListener);
+    
 }
 
 
@@ -35,22 +37,9 @@ let enterListener = function(event){
 	if (event.code === "Enter") {
 		//console.log("Код активирован");
         
-        animate();
-        gameStatus = 'run';
-        audio.play();
+        Start();
+        
 	}
-
-/*let oneStep1 = function(){
-	console.log(ballMesh.position.z);
-	ballMesh.position.z = ballMesh.position.z - 1;
-}
-
-for ( var i = 0; i < 101; i++ ) {
-	
-//setTimeout(oneStep1, 1000);
-oneStep1();
-sleep(100);
-}*/
 
 }
 document.addEventListener( "keydown" , enterListener);
